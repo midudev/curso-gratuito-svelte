@@ -1,2 +1,1 @@
-# curso-gratuito-svelte
-Curso gratuito de Svelte en Youtube
+Encuentra el README completo aquí: https://github.com/midudev/curso-gratuito-svelte
