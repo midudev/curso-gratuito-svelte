@@ -1,6 +1,6 @@
-# Curso gratuito de Svelte 🔶
+# Curso gratuito de Svelte
 
-Curso gratuito de Svelte en Youtube
+![Curso gratuito de Svelte por @midudev](https://midu.dev/images/svelte-logo.png)
 
 ## ¿Qué es Svelte? 
 
