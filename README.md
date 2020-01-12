@@ -8,5 +8,5 @@
 
 ## Curso
 
-- Introducción a Svelte: [Artículo 📝](https://midu.dev/introducci%C3%B3n-a-svelte/) [Vídeo 📹](https://www.youtube.com/watch?v=Xsxm8_BI63s)
-- Creando un proyecto con Svelte: [Artículo 📝](https://midu.dev/crea-un-nuevo-proyect-con-svelte-3/) [Vídeo 📹](https://www.youtube.com/watch?v=VTkDuQ9RLVU) [Código 👨‍💻]()
+- Introducción a Svelte: [Artículo 📝](https://midu.dev/introducci%C3%B3n-a-svelte/) • [Vídeo 📹](https://www.youtube.com/watch?v=Xsxm8_BI63s)
+- Creando un proyecto con Svelte: [Artículo 📝](https://midu.dev/crea-un-nuevo-proyect-con-svelte-3/) •  [Vídeo 📹](https://www.youtube.com/watch?v=VTkDuQ9RLVU)  • [Código 👨‍💻]()
