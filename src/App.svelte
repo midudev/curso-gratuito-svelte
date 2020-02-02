@@ -1,11 +1,7 @@
 <script>
-	export let name;
+	import Counter from './Counter.svelte'
 </script>
 
-<style>
-	h1 {
-		color: #09f;
-	}
-</style>
-
-<h1>Hola {name}!</h1>
+<Counter initialCounter={2} />
+<Counter initialCounter={10} />
+<Counter />

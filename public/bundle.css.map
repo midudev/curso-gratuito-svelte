@@ -2,11 +2,13 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../src/App.svelte"
+    "../App.svelte",
+    "../Counter.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\texport let name;\n</script>\n\n<style>\n\th1 {\n\t\tcolor: #09f;\n\t}\n</style>\n\n<h1>Hola {name}!</h1>\n"
+    "<script>\n\timport Counter from './Counter.svelte'\n</script>\n\n<style>\nspan {\n\tcolor: #09f;\n}\n</style>\n\n<Counter />\n<Counter />\n<Counter />\n<span>Tenemos counters aqui</span>",
+    "<script>\n\texport let initialCounter = 0;\n\tlet contador = initialCounter\n\n\tfunction handleClick () {\n\t\tcontador++\n\t}\n</script>\n\n<style>\n\tspan {\n\t\tcolor: red;\n\t}\n</style>\n\n<button on:click={handleClick}>Incrementar</button>\n<span>{contador}</span>"
   ],
   "names": [],
-  "mappings": "AAKC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,IAAI,AACZ,CAAC"
+  "mappings": "AAKA,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,IAAI,AACZ,CAAC;ACGA,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACX,CAAC"
 }
