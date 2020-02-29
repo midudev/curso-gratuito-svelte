@@ -2,13 +2,11 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../App.svelte",
     "../Counter.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport Counter from './Counter.svelte'\n</script>\n\n<style>\nspan {\n\tcolor: #09f;\n}\n</style>\n\n<Counter />\n<Counter />\n<Counter />\n<span>Tenemos counters aqui</span>",
-    "<script>\n\texport let initialCounter = 0;\n\tlet contador = initialCounter\n\n\tfunction handleClick () {\n\t\tcontador++\n\t}\n</script>\n\n<style>\n\tspan {\n\t\tcolor: red;\n\t}\n</style>\n\n<button on:click={handleClick}>Incrementar</button>\n<span>{contador}</span>"
+    "<script>\n\texport let initialCounter = 0;\n\texport let maxCounter = 9;\n\n\tlet contador = initialCounter\n\n\tfunction handleClick () {\n\t\tcontador++\n\t}\n\n\t// let isEvenOrOdd = contador % 2 === 0 ? 'Is Even' : 'Is Odd'\n\t$: isEvenOrOdd = contador % 2 === 0 ? 'Is Even' : 'Is Odd'\n\t$: if (contador > maxCounter ) {\n\t\tconsole.log('limit contador')\n\t\tcontador = maxCounter\n\t}\n\n</script>\n\n<style>\n\tspan {\n\t\tcolor: red;\n\t}\n</style>\n\n<button on:click={handleClick}>Incrementar</button>\n<span>{contador}</span>\n<span>{isEvenOrOdd}</span>"
   ],
   "names": [],
-  "mappings": "AAKA,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,IAAI,AACZ,CAAC;ACGA,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACX,CAAC"
+  "mappings": "AAoBC,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACX,CAAC"
 }
