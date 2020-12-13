@@ -2,13 +2,15 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
+    "../App.svelte",
     "../Counter.svelte",
     "../Movie.svelte"
   ],
   "sourcesContent": [
+    "<script>\n\timport Counter from './Counter.svelte'\n\timport Input from './Input.svelte'\n\n\tconst commonProps = { maxCounter: 5 }\n</script>\n\n<style>\nh1 {\n\tfont-size: 32px;\n}\nsection {\n\talign-items: center;\n\tdisplay: flex;\n\tflex-direction: column;\n}\n</style>\n\n<section>\n\t<h1>Search Movies 🍿</h1>\n\t<Input/>\n</section>",
     "<script>\n\texport let initialCounter = 0;\n\texport let maxCounter = 9;\n\n\tlet contador = initialCounter\n\n\tfunction handleClick () {\n\t\tcontador++\n\t}\n\n\t// let isEvenOrOdd = contador % 2 === 0 ? 'Is Even' : 'Is Odd'\n\t$: isEvenOrOdd = contador % 2 === 0 ? 'Is Even' : 'Is Odd'\n\t$: if (contador > maxCounter ) {\n\t\tconsole.log('limit contador')\n\t\tcontador = maxCounter\n\t}\n\n</script>\n\n<style>\n\tspan {\n\t\tcolor: red;\n\t}\n</style>\n\n<button on:click={handleClick}>Incrementar</button>\n<span>{contador}</span>\n<span>{isEvenOrOdd}</span>",
     "<script>\n  export let title, poster, year\n</script>\n\n<style>\narticle {\n  border: 1px solid #eee;\n  border-radius: 4px;\n  margin-bottom: 8px;\n  padding: 16px;\n}\n\nh3 {\n  font-size: 24px;\n  margin-bottom: 4px;\n}\n</style>\n\n<article>\n  <img alt={title} src={poster} />\n  <h3>{title}</h3>\n  <span>{year}</span>\n  {#if 2020 - year < 5}\n    <i>🆕</i>\n  {/if}\n</article>"
   ],
   "names": [],
-  "mappings": "AAoBC,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACX,CAAC;ACjBF,OAAO,eAAC,CAAC,AACP,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,CAClB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,IAAI,AACf,CAAC,AAED,EAAE,eAAC,CAAC,AACF,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,GAAG,AACpB,CAAC"
+  "mappings": "AAQA,EAAE,cAAC,CAAC,AACH,SAAS,CAAE,IAAI,AAChB,CAAC,AACD,OAAO,cAAC,CAAC,AACR,WAAW,CAAE,MAAM,CACnB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,AACvB,CAAC;ACKA,IAAI,cAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACX,CAAC;ACjBF,OAAO,eAAC,CAAC,AACP,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,CAClB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,IAAI,AACf,CAAC,AAED,EAAE,eAAC,CAAC,AACF,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,GAAG,AACpB,CAAC"
 }
